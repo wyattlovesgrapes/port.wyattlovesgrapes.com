@@ -105,3 +105,6 @@ html.project-open{overflow:hidden;overscroll-behavior:none}
 .music-menu{left:16px;right:auto}
 @media(max-width:650px){.header-left{left:6px;right:auto}.header-right{left:auto;right:6px}}
 .window-content .gallery-frame{background:transparent}
+
+.cv-underlined{text-decoration:underline}
+@media(max-width:650px){.site-footer{flex-wrap:nowrap}.footer-right p{display:none}}
