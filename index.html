@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small portfolio by John Wyatt.">
+  <title>john wyatt — port</title>
+  <link rel="icon" href="https://www.grape.wtf/assets/grape-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <img class="disc-icon" src="https://www.grape.wtf/assets/widget-icons/disk2.png" alt="disc icon">
+      <button id="play-btn" type="button">play</button>
+      <button id="pause-btn" type="button">pause</button>
+      <div class="marquee" aria-live="polite"><div class="marquee-item"><span class="now-playing">no music is playing</span></div><div class="marquee-item" aria-hidden="true"><span class="now-playing">no music is playing</span></div></div>
+      <button id="dropdown-btn" type="button" aria-label="Show music choices" aria-expanded="false" aria-controls="music-menu">\/</button>
+    </div>
+    <div class="header-right"><a href="https://www.wyattlovesgrapes.com/widgets/tertiary/recycle/oops.html" title="pixel icons">do not click here</a></div>
+    <section id="music-menu" class="music-menu" hidden aria-label="Music choices">
+      <audio id="bg-music" loop preload="none"></audio>
+      <div class="dropdown-item"><button type="button" data-track="html">html song</button><p>by: after new order</p><a href="http://afterneworder.com/htmlsong/orderthesong.html">link</a></div>
+      <div class="dropdown-item"><button type="button" data-track="moda">moda</button><p>by: crime daughter</p><a href="https://crimedaughter.bandcamp.com/album/never-be-a-pawn-always-be-a-child">link</a></div>
+    </section>
+  </header>
+
+  <main class="content">
+    <div class="page-heading"><div class="heading-text"><h1><a class="home-link" href="#work">john wyatt</a></h1><nav class="social-links" aria-label="Social links"><a href="#cv" id="cv-link">cv</a><a href="#work" id="work-link" hidden>work</a><a href="#skills" id="skills-link">skills</a><a href="https://github.com/wyattlovesgrapes">github</a><a href="https://x.com/n0homie">twitter</a><a href="https://special.fish/wyatt">special.fish</a><a href="https://www.linkedin.com/in/john-wyatt-5b334699/">linkedin</a></nav></div><img class="heading-logo" src="https://www.grape.wtf/assets/grape-192x192.png" alt="the grape corporation logo"></div>
+    <section class="cv-content" id="cv" hidden>
+      <section class="cv-section"><h3>experience</h3>
+        <div class="cv-entry"><h4><a href="https://www.gritt.ai/">Gritt.ai</a></h4><p>Sub Contract - Metal Fabrication</p><p>Aug 2026 - Present</p></div>
+        <div class="cv-entry"><h4><a href="https://odell.house/">odell.house</a></h4><p>Head of Manufacturing - Luxury Furniture</p><p>May 2025 - Present</p></div>
+        <div class="cv-entry"><h4>Contract Manufacturing - Various Clients</h4><p>CNC Machining - Robotics, Aerospace, Consumer Products</p><p>Jan 2024 - May 2025</p></div>
+        <div class="cv-entry"><h4><a href="https://www.zesty.market/">Zesty Market</a> &amp; <a href="https://www.meta.com/experiences/gabber/24686681817597416/">Gabber</a></h4><p>Head of Product - XR Advertising &amp; AI Social</p><p>June 2022 - Nov 2023</p></div>
+        <div class="cv-entry"><h4><a href="https://www.jazwares.com/">Jazwares</a></h4><p>Associate Designer - <a href="https://www.instagram.com/officialmicromachines/?hl=en">Micro Machines</a> / Transformers</p><p>June 2020 - June 2022</p></div>
+        <div class="cv-entry"><h4><a href="https://www.educationalinsights.com/">Educational Insights</a></h4><p>Toy Designer Engineer - Prototyping</p><p>May 2019 - March 2020</p></div>
+        <div class="cv-entry"><h4><a href="https://www.treatstreet.com/">My Favorite Company</a></h4><p>Chocolate Mold Design - CVS, Walmart, Kroger</p><p>Jan 2019 - May 2019</p></div>
+        <div class="cv-entry"><h4>Otis College of Art and Design</h4><p>Teaching Assistant - <a href="https://www.otis.edu/catalog/current/courses/index.pdf">FNDT 161 Building Form &amp; Space</a></p><p>6 Semesters 2017 - 2020</p></div>
+      </section>
+      <section class="cv-section"><h3>education</h3>
+        <div class="cv-entry"><h4><a href="https://www.uncsa.edu/high-school/index.aspx">North Carolina School of the Arts</a></h4><p>Ballet &amp; Modern Dance - Boarding High School</p><p>2010 - 2013</p></div>
+        <div class="cv-entry"><h4><a href="https://minneapolis.edu/academics/school-design-and-arts">Minneapolis Community and Technical College</a></h4><p>Industrial Design - Began AA Degree</p><p>2015 - 2016</p></div>
+        <div class="cv-entry"><h4><a href="https://www.otis.edu/programs/undergraduate/bfa-toy-design/index.html">Otis College of Art and Design</a></h4><p>Toy Design - Bachelor of Fine Arts</p><p>2017 - 2020</p></div>
+      </section>
+      <section class="cv-section"><h3>selected projects</h3>
+        <div class="cv-entry"><h4>consumer</h4><p><a href="#project-micro-machines">micro machines</a><br><a href="#project-artie-3000">artie 3000</a></p></div>
+        <div class="cv-entry"><h4>software</h4><p><a href="#project-odell-workers">odell-workers</a><br><a href="#project-gabber">gabber</a><br><a href="#project-zesty-market">zesty market</a></p></div>
+        <div class="cv-entry"><h4>experiments</h4><p><a href="#project-auto-chop-saw">auto chop saw</a><br><a href="#project-grblwave">Grblwave</a><br><a href="#project-popkorn">popkorn</a><br><a href="#project-live-server-maintained">live-server-maintained</a><br><a href="#project-docker-good-boy">docker-good-boy</a></p></div>
+        <div class="cv-entry" hidden><h4>art</h4><p><a href="#project-plates-have-feelings-too">plates have feelings too</a></p></div>
+      </section>
+    </section>
+    <section class="cv-content" id="skills" aria-label="Skills" hidden>
+      <section class="cv-section"><h3>skills</h3>
+        <div class="cv-entry"><p>chopping wood<br>cutting metal<br>building machines</p></div>
+        <div class="cv-entry"><p>rhino 3D / grasshopper<br>fusion<br>blender<br>zbrush</p></div>
+        <div class="cv-entry"><p>figma<br>adobe<br>affinity</p></div>
+        <div class="cv-entry"><p>cf workers/R2/D1<br>three.js<br>grbl<br>arduino/esp<br>quart / DO</p></div>
+      </section>
+    </section>
+    <section class="projects" id="work" aria-label="Portfolio projects">
+      <div class="project-grid" aria-label="Select a project"></div>
+      <div class="project-details" hidden>
+      <!-- Duplicate a project article to add another entry. Replace the placeholder slides with images or videos. -->
+      <article class="project" id="project-micro-machines" data-preview="assets/micro-machines-preview.gif">
+        <h2 class="project-title">Micro Machines</h2>
+        <div class="project-description"><p>I worked on Micro Machines for two years as an Associate Product Designer. I did everything from designing cars to building paper models of playsets. I made injection mold ready CAD and created new product lines like the Mystery Box Playset.</p><p>Working on Micro Machines was a cruel exercise in cost reduction. It was a $20 million brand that paid $2 million to license it from Hasbro and spent $17 million to operate. Our margins for toys were very thin at a time when manufacturing was seeing major disruptions from the COVID crisis.</p><p>In the end, the relaunched '80s brand was wound down aside from a few evergreen products that live on, like the Corvette Raceway playset I originally designed out of cardboard on my living room floor.</p><p>You can purchase it on Amazon <a href="https://www.amazon.com/dp/B08SSYXBJ7?plpRedirect=mhFallback&amp;ref=clp_hp_h_pc">here</a>.</p></div>
+        <div class="gallery" aria-label="Micro Machines media">
+          <div class="gallery-frame">
+            <img class="slide" src="assets/micro-machines-preview.gif" alt="Micro Machines animated preview"><img class="slide" src="assets/micro-machines.jpg" alt="Fruit by the Foot Starburst variety pack" hidden><img class="slide" src="assets/micro-machines-sketch-clean.png" alt="Micro Machines track concept sketches" hidden><img class="slide micro-prototype" src="assets/micro-machines-prototype.png" alt="Micro Machines cardboard track prototypes" hidden><img class="slide" src="assets/micro-machines-construction.png" alt="Micro Mystery Packs construction set" hidden><img class="slide" src="assets/micro-machines-action-pack.png" alt="Micro Machines action pack concept renders" hidden><iframe class="slide" hidden src="https://www.youtube-nocookie.com/embed/TCmD5JQNllA" title="Micro Machines video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 7</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <a class="project-link" href="https://www.amazon.com/dp/B08SSYXBJ7?plpRedirect=mhFallback&amp;ref=clp_hp_h_pc">purchase on Amazon</a>
+        </div>
+      </article>
+      <article class="project" id="project-circuit-explorer" data-preview="assets/circuit-explorer-preview.gif">
+        <h2 class="project-title">Circuit Explorer</h2>
+        <div class="project-description"><p>Circuit Explorer was an inventor-submitted product I worked on at <a href="https://www.educationalinsights.com/">Educational Insights</a>. Many of the products EI makes are inventor products, which the internal team then tweaks and develops into their final form.</p><p>I assisted on this product rather than leading its direction, but I produced many of the final CAD parts found in the kits. Overall, I would have liked to add more detail and texture to the moldings, but due to production time constraints, many of the pieces were left smooth and decals were applied instead.</p></div>
+        <div class="gallery" aria-label="Circuit Explorer media">
+          <div class="gallery-frame">
+            <img class="slide" src="assets/circuit-explorer-preview.gif" alt="Circuit Explorer animated preview"><img class="slide" src="assets/circuit-explorer.jpg" alt="Circuit Explorer product" hidden><iframe class="slide" hidden src="https://www.youtube-nocookie.com/embed/a4mDeNzqBic" title="Circuit Explorer video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 3</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <a class="project-link" href="https://www.amazon.com/clp/B08BXLZTBL?lv=shuf&amp;channelId=500">buy on Amazon</a>
+        </div>
+      </article>
+      <article class="project" id="project-artie-3000" data-preview="assets/artie-preview.gif">
+        <h2 class="project-title">Artie 3000</h2>
+        <div class="project-description"><p>Artie 3000 was a simple drawing robot designed at <a href="https://www.educationalinsights.com/">Educational Insights</a> before I joined the team. It was originally an inventor submission based on the ESP8266. Around the time the ESP32 was becoming the new standard, I did extensive prototyping for a V2 of Artie, eventually released as Artie Max.</p><p>Artie was a toy designed to teach children programming using basic JavaScript, Python, or Scratch. During the holiday season I worked on Artie, I developed a simple randomized snowflake script that was distributed online for download. The script chose a random number of arms and designs along each arm to draw a unique snowflake pattern every time.</p></div>
+        <div class="gallery" aria-label="Artie 3000 media">
+          <div class="gallery-frame">
+            <img class="slide" src="assets/artie-preview.gif" alt="Artie 3000 animated preview"><iframe class="slide" src="https://www.youtube-nocookie.com/embed/wGusqASXaJo" title="Artie 3000 video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
+          </div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 2</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <a class="project-link" href="https://www.amazon.com/Educational-Insights-Artie-Coding-Drawing/dp/B0977QLC14/">buy Artie Max on Amazon</a>
+        </div>
+      </article>
+      <article class="project" id="project-odell-workers">
+        <h2 class="project-title">odell-workers</h2>
+        <div class="project-description"><p>When building out our web store, <a href="https://odell.house/">odell.house</a>, I've become pretty obsessed with <a href="https://www.cloudflare.com/developer-platform/products/workers/">Cloudflare Workers</a>. I get into the specifics in my odell.house project, but I've essentially created a semi-static webstore builder running entirely on Cloudflare.</p><p>Roz handles my CDN needs, Dante acts as my checkout clerk (he wasn't even supposed to be here today!), Donna acts as my general office manager, handling admin and integrating with our ERP, and Wilson monitors everything.</p></div>
+        <div class="gallery" aria-label="odell-workers media">
+          <div class="gallery-frame"><img class="slide" src="assets/dante.webp" alt="Dante"><img class="slide donna-slide" data-frame-height-ratio="0.75" src="assets/donna.webp" alt="Donna" hidden><img class="slide" src="assets/roz.webp" alt="Roz" hidden></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 3</span><button class="next" type="button" aria-label="Next media">→</button></div>
+        </div>
+      </article>
+      <article class="project" id="project-gabber">
+        <h2 class="project-title">Gabber</h2>
+        <div class="project-description"><p>Gabber was an early AR/AI chatbot released on the <a href="https://www.meta.com/experiences/gabber/24686681817597416/">Meta Quest Store</a>. Developed in early 2023 after the launch of <a href="https://elevenlabs.io/">ElevenLabs</a> and GPT-4, it used a custom multi-threaded harness for contextual and emotional inference, along with early versions of <a href="https://livekit.io/">LiveKit</a> for low-latency voice streaming.</p><p>We achieved &gt;300 ms latency with around a 1.5-second conversation start time. Users could interrupt, emotional sentiment could trigger animations, and we could create a variety of character agents. <a href="https://github.com/readyplayerme">Ready Player Me</a> was used for avatars.</p><p>On Gabber I led the design and UI direction. I created a nostalgic 90s look that was fun and lighthearted, emphasizing the cartoon likeness of our avatars.</p></div>
+        <div class="gallery" aria-label="gabber media">
+          <div class="gallery-frame"><img class="slide" src="assets/gabber-orange.png" alt="Gabber login concept in orange"><img class="slide" src="assets/gabber-blue.png" alt="Gabber login concept in blue" hidden><img class="slide" src="assets/gabber-login.png" alt="Gabber name entry screen" hidden></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 3</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <a class="project-link" href="https://www.meta.com/experiences/gabber/24686681817597416/">view on the meta quest store</a>
+        </div>
+      </article>
+      <article class="project" id="project-zesty-market">
+        <h2 class="project-title">Zesty Market</h2>
+        <div class="project-description"><p>Zesty Market was an in-game ad network targeting WebXR games, now rebranded to <a href="https://www.borellion.com/">Borellien</a>.</p><p>From 2022 to 2023, when I was Head of Product, we grew our unique monthly visitors from 150k to 300k. Based on total Quest headsets sold at the time, this was close to 2% of all Quest users and roughly equivalent to the total number of users playing WebXR games in the Quest browser.</p><p>Alongside <a href="https://wonderlandengine.com/">Wonderland</a> and <a href="https://heyvr.io/">Hey.vr</a>, we had the most direct insight into the development of WebXR outside of Meta's internal teams.</p></div>
+        <div class="gallery" aria-label="zesty market media">
+          <div class="gallery-frame"><img class="slide" src="assets/zesty-market.png" alt="Zesty Market website showing the 3D Audience Network"><img class="slide" src="assets/zesty-one-pager.png" alt="Zesty Market advertising overview" hidden><img class="slide" src="assets/zesty-agents-dashboard.jpg" alt="Zesty Agents dashboard design" hidden></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 3</span><button class="next" type="button" aria-label="Next media">→</button></div>
+        </div>
+      </article>
+      <article class="project" id="project-auto-chop-saw" data-preview="assets/auto-chop-saw-preview.gif">
+        <h2 class="project-title">Auto Chop Saw</h2>
+        <div class="project-description"><p>Back in July I signed up for a hackathon at <a href="https://f.inc/">Founders Inc</a> to give myself some accountability and finally built out this CNC chop saw concept with two of my friends, <a href="https://x.com/zachglabman?lang=en">Zach Glabman</a> and <a href="https://x.com/KaelSeaver">Kael Seaver</a>. It was awesome.</p><p>We spent about four hours cannibalizing a 3018 and slapping it on the saw. I also wired up a relay to the spindle output so we could turn the bad boy on remotely (we sorta bypassed the safety features for this :D). We learned we needed more torque for some of the motors, but the concept and code worked.</p><p>It spawned the project <a href="#project-grblwave">Grblwave</a> to build a more powerful GRBL motion control board, and a V2 made of sheet metal is in the works. We placed top ten in the hackathon and won a $100 gift card that was indefinitely delayed in transit...</p></div>
+        <div class="gallery" aria-label="auto chop saw media">
+          <div class="gallery-frame"><img class="slide" src="assets/auto-chop-saw-preview.gif" alt="Auto Chop Saw animated preview"><iframe class="slide social-embed" hidden title="Auto chop saw post on X" scrolling="no" srcdoc="&lt;!doctype html&gt;&lt;html lang='en'&gt;&lt;head&gt;&lt;meta name='viewport' content='width=device-width, initial-scale=1'&gt;&lt;style&gt;html,body{margin:0;background:transparent;overflow:hidden}body{display:flex;justify-content:center;zoom:.65}.twitter-tweet{margin:auto;visibility:hidden}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote class='twitter-tweet' data-align='center'&gt;&lt;a href='https://x.com/n0homie/status/2080904660001706326'&gt;View the auto chop saw post on X&lt;/a&gt;&lt;/blockquote&gt;&lt;script async src='https://platform.twitter.com/widgets.js' charset='utf-8'&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 2</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <a class="project-link" href="https://x.com/n0homie/status/2080904660001706326">view post on x</a>
+        </div>
+      </article>
+      <article class="project" id="project-grblwave">
+        <h2 class="project-title">Grblwave</h2>
+        <div class="project-description readme-content"><p>a GRBL-like CNC motion control system made to pair nicely with the popkorn operation kernel.</p><p>emulates GRBL style serial communication while extending the capabilities of standard GRBL.</p><h3>goals</h3><ul><li>run more axis than typical GRBL boards</li><li>support extra sensors and servos</li></ul></div>
+        <div class="gallery" aria-label="Grblwave media">
+          <div class="gallery-frame"><img class="slide" src="assets/grblwave.png" alt="Grblwave source code in the editor"></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 1</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <button class="project-link private-repo" type="button"><span class="private-repo-label">private repo<img src="https://www.wyattlovesgrapes.com/assets/graphics/close.png" alt="" aria-hidden="true"></span></button>
+        </div>
+      </article>
+      <article class="project" id="project-popkorn">
+        <h2 class="project-title">popkorn</h2>
+        <div class="project-description readme-content">
+          <p><code>popkorn</code> is a non-sequential operation kernel designed to help machine commonly manufactured parts.</p>
+          <ul><li>a bunch of nodes in graphs which can be evaluated for various outcomes</li><li>intentionally as simple as possible</li><li>trying to avoid becoming another b-rep kernel, maybe someday b-rep evaluation</li><li>stores minimal data and throws out a lot</li></ul>
+          <p>it is made up of a handful of parts:</p>
+          <h3>graphs</h3>
+          <p><code>operation intent graph</code></p><ul><li>stores design features and modeling intent</li><li>can evaluate to gcode operations, rendered meshes, and(maybe someday) STEP format</li></ul>
+          <p><code>evaluation graph</code></p><ul><li>stores evaluated data on a component basis</li><li>can be thrown away and re-evaluated at will</li></ul>
+          <h3>validators</h3><ul><li>validates graph inputs with error reporting for when things break</li><li>pays attention to both schema and content</li></ul>
+          <h3>evaluators</h3><ul><li>generates gcode and data to construct meshes</li><li>outputs to common model formats like GCODE, STL, or STEP</li></ul>
+          <h3>interpretor</h3><ul><li>triggers inferred evaluations based on modeling intent</li></ul>
+          <h3>development plan</h3>
+          <p><code>v0.0.1</code></p><ul><li>create a basic graph and root node schema [X]</li><li>enforce data type and graph ownership [X]</li><li>generate a node of some type [X]</li><li>define a tool node [X]</li><li>define a stock node [X]</li><li>define an operation node [X]</li></ul>
+          <p><code>v0.0.2</code></p><ul><li>evaluate a basic pocket operation [ ]</li></ul>
+          <p><code>planned</code></p><ul><li>define basic geometry nodes for primative solids [ ]</li></ul>
+          <p><code>way in the future</code></p><ul><li>import STEP</li></ul>
+          <p><code>way way in the future</code></p><ul><li>evaluate to STEP (seriously, maybe)</li></ul>
+        </div>
+        <div class="gallery" aria-label="popkorn media">
+          <div class="gallery-frame"><img class="slide" src="assets/popkorn.jpg" alt="Popcorn"></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 1</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <button class="project-link private-repo" type="button"><span class="private-repo-label">private repo<img src="https://www.wyattlovesgrapes.com/assets/graphics/close.png" alt="" aria-hidden="true"></span></button>
+        </div>
+      </article>
+      <article class="project" id="project-live-server-maintained">
+        <h2 class="project-title">live-server-maintained</h2>
+        <div class="project-description readme-content"><p>An updated version of <a href="https://github.com/tapio/live-server">live-server</a> with refreshed dependencies.</p><p>The command is shortened from <code>live-server</code> to <code>lvm</code>:</p><pre><code>lvm</code></pre><p>Thats all you need to know.</p><p>Original project created by <a href="https://github.com/tapio">Tapio Vierros</a>.</p></div>
+        <div class="gallery" aria-label="live-server-maintained media">
+          <div class="gallery-frame"><img class="slide" src="assets/live-server-maintained-cropped.png" alt="live-server-maintained package page"></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 1</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <a class="project-link" href="https://github.com/wyattlovesgrapes/live-server-maintained">git repo</a>
+        </div>
+      </article>
+      <article class="project" id="project-docker-good-boy">
+        <h2 class="project-title">docker-good-boy</h2>
+        <div class="project-description readme-content">
+          <p>Hey guys, I domesticated Docker! A silly little script that wraps docker compose commands, mostly useful because of <code>docker-rollover</code>.</p>
+          <h3>Tricks</h3>
+          <ul><li><code>docker-sit &lt;optional-container-name&gt;</code> : <code>docker compose pause</code></li><li><code>docker-up &lt;optional-container-name&gt;</code> : <code>docker compose up -d</code></li><li><code>docker-down &lt;optional-container-name&gt;</code> : <code>docker compose down</code></li><li><code>docker-rollover</code> : <code>docker-compose down &amp;&amp; - docker-compose build --no-cache &amp;&amp; docker-compose up -d</code></li><li><code>docker-good-boy</code> &amp;&amp; <code>docker-gb</code> : <code>docker ps &amp;&amp; echo \"woof\"</code></li></ul>
+          <h3>How To Train Your Dog</h3>
+          <ol><li>Git clone this project and navigate to the project folder.</li><li>Run <code>chmod +x docker_good_boy.sh</code>.</li><li>If you get the <code>~/.zshrc not found!</code> error, make one using <code>touch ~/.zshrc</code>.</li><li>Then, run <code>./docker_good_boy.sh</code> to add the aliases to your <code>~/.zshrc</code>.</li><li>Reload you <code>/.zshrc</code> with <code>source ~/.zshrc</code>.</li></ol>
+          <h3>Updating</h3>
+          <p>All you should need to do is repeat the above steps, but if you run into issues try:</p>
+          <ol><li>Clearing the aliases and functions manually with <code>nano ~/.zshrc</code> then repeat the above steps.</li></ol>
+        </div>
+        <div class="gallery" aria-label="docker-good-boy media">
+          <div class="gallery-frame"><img class="slide" src="https://raw.githubusercontent.com/wyattlovesgrapes/docker-good-boy/main/good-boys/good-boy.jpeg" alt="A good dog"></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 1</span><button class="next" type="button" aria-label="Next media">→</button></div>
+          <a class="project-link" href="https://github.com/wyattlovesgrapes/docker-good-boy">git repo</a>
+        </div>
+      </article>
+      <article class="project" id="project-plates-have-feelings-too" data-inactive>
+        <h2 class="project-title">plates have feelings too</h2>
+        <div class="project-description"><p>A project description will go here.</p></div>
+        <div class="gallery" aria-label="plates have feelings too media">
+          <div class="gallery-frame"><div class="slide placeholder"><span>project media</span><small>photo or video goes here</small></div></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 1</span><button class="next" type="button" aria-label="Next media">→</button></div>
+        </div>
+      </article>
+      <article class="project" id="project-robot-rally">
+        <h2 class="project-title">robot rally</h2>
+        <div class="project-description"><p>Robot Rally was an early WebXR looter shooter demo, likely the first non-native multiplayer shooter game to exist in WebXR. At the time and still today, many VR/AR games target the native Quest platform.</p><p>We developed Robot Rally as an experiment in how we could grow our in-game XR ad network, <a href="https://www.zesty.market/">Zesty Market</a>, by building games of our own. We eventually pivoted in another direction, but it was here that I did my early exploration with <a href="https://threejs.org/">Three.js</a>.</p><p>On Robot Rally, I led the concept and graphic design, hand-drew the characters and menus, modeled the first player avatars, and designed the maps and gameplay.</p></div>
+        <div class="gallery" aria-label="Robot Rally media">
+          <div class="gallery-frame"><img class="slide" src="assets/robot-rally-cover.jpg" alt="Robot Rally cover artwork"><img class="slide" src="assets/zesty-robot-rally.png" alt="Robot Rally welcome screen and game controls" hidden></div>
+          <div class="gallery-controls"><button class="previous" type="button" aria-label="Previous media">←</button><span class="gallery-count" aria-live="polite">1 / 2</span><button class="next" type="button" aria-label="Next media">→</button></div>
+        </div>
+      </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="project-window" aria-labelledby="window-title">
+    <div class="window-header"><h2 id="window-title"></h2><button class="window-close" type="button" aria-label="Close project"><img src="https://www.wyattlovesgrapes.com/assets/graphics/close.png" alt=""></button></div>
+    <div class="window-content"></div>
+    <img class="window-corner corner-0" src="https://www.wyattlovesgrapes.com/assets/graphics/corner-0.png" alt=""><img class="window-corner corner-1" src="https://www.wyattlovesgrapes.com/assets/graphics/corner-1.png" alt=""><img class="window-corner corner-2" src="https://www.wyattlovesgrapes.com/assets/graphics/corner-2.png" alt=""><img class="window-corner corner-3" src="https://www.wyattlovesgrapes.com/assets/graphics/corner-3.png" alt="">
+    <span class="window-line line-0" aria-hidden="true"></span><span class="window-line line-1" aria-hidden="true"></span><span class="window-line line-2" aria-hidden="true"></span><span class="window-line line-3" aria-hidden="true"></span>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer-right"><a href="https://www.grape.wtf/pages/credits.html">credits</a><p>|</p><p>made in california by <a href="https://www.grape.wtf/">grape.wtf</a></p></div>
+    <div class="footer-left"><img src="https://www.grape.wtf/assets/grape-32x32.png" alt="the grape corporation logo"><p>the grape corporation</p></div>
+  </footer>
+</body>
+</html>
