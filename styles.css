@@ -108,3 +108,5 @@ html.project-open{overflow:hidden;overscroll-behavior:none}
 
 .cv-underlined{text-decoration:underline}
 @media(max-width:650px){.site-footer{flex-wrap:nowrap}.footer-right p{display:none}}
+
+.email-link{display:inline-block;font-size:12px;margin-top:7px}
