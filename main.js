@@ -138,6 +138,7 @@ projects.forEach(project => {
     activeProject = project;
     windowTitle.textContent = title;
     windowContent.append(project);
+    windowContent.scrollTop = 0;
     projectWindow.showModal();
     document.documentElement.classList.add('project-open');
     projectWindow.querySelector('.window-close').focus();
